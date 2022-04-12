@@ -1,32 +1,37 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
-  </div>
+	<!-- template相当于原来的组件中template属性 -->
+	<div id="app">
+		<h2>{{reverseMsg}}</h2>
+	</div>
 </template>
 
+
+<script type="text/javascript">
+	// export port 这个组件需要被其他应用需要导用、
+	export default{
+		name:"APP",
+		//返回变量的时候也是以函数的形式进行返回
+		data:function(){
+			return {
+				msg:"hahahhahahhahahha"
+			}
+		},
+		//计算属性
+		computed:{
+			reverseMsg:function(){
+				return this.msg.split("").reverse().join("")
+			}
+		}
+	}
+</script>	
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+	#app{
+		border: 1px solid green;
+	}
+	h2{
+		font-size: 40px;
+		color: gold;
+		text-shadow: 3px 4px yellow;
+	}
 </style>
