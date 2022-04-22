@@ -1,4 +1,6 @@
-# vueclidemo0415
+# Ordering
+
+Ordering frontend Demo
 
 ## Project setup
 ```
